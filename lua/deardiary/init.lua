@@ -53,7 +53,16 @@ M.create_diary_entry = function(frequency_name, offset, curr_date)
     end
 
     local parts = util.split_path(journal.path)
-    table.insert(parts, frequency_name)
+    -- table.insert(parts, frequency_name)
+
+    --     local create_folder = config_freq.frequency_folder
+    --     local journal_freq_folder = journal.frequency_folder
+
+    --     if config_freq_folder == true or nil then
+    --       if journal_freq_folder == true or nil then
+    --         table.insert(parts, frequency_name)
+    --       end
+    --     end
 
     local entry_date = M.get_date(offset, frequency, curr_date:copy())
     local entry_path = frequency.formatpath(entry_date:copy())

@@ -32,7 +32,7 @@ M.frequencies = {
         end,
         formatpath = function(entry_date)
             return entry_date:fmt(util.join_path({"%Y", "%W.md"}))
-        end,
+        end
     },
     monthly = {
         transform = function(curr_date, offset)
@@ -44,7 +44,7 @@ M.frequencies = {
         end,
         formatpath = function(entry_date)
             return entry_date:fmt(util.join_path({"%Y", "%m.md"}))
-        end,
+        end
     },
     yearly = {
         transform = function(curr_date, offset)
@@ -57,7 +57,7 @@ M.frequencies = {
         formatpath = function(entry_date)
             return entry_date:fmt("%Y.md")
         end
-    },
+    }
 }
 
 M.journals = {}
